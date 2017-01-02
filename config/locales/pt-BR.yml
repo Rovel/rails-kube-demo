@@ -19,6 +19,14 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  welcome: "Welcome"
+pt-BR:
+  hello: "Olá"
+  welcome: "Bem-vindo"
+  profile: "Perfil"
+  evaluations: "Avaliações"
+  help: "Ajuda"
+  prices: "Preços"
+  about: "Sobre"
+  logout: "Sair"
+  login: "Entrar"
+  register: "Cadastrar"
