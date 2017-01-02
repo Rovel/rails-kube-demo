@@ -27,12 +27,39 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Slim templates generator for Rails 3, 4 and 5
+gem 'slim-rails'
+# For enumerations
+gem 'enumerate_it'
+# For authentication
+gem 'devise'
+# To authenticate users through oauth
+gem 'omniauth'
+# Rails's translations
+gem 'rails-i18n'
+# To localize routes according to application language
+gem 'route_translator'
+# To parse links, youtube embeds, soundcloud player...
+gem 'auto_html'
+# Manage Procfile-based applications
+gem 'foreman'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'letter_opener'
+  gem "parallel_tests"
+  gem 'dotenv-rails'
+  gem 'spring'
+  gem 'awesome_print'
+  gem 'bullet'
+  gem 'zeus'
 end
 
 group :development do
@@ -42,6 +69,22 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :test do
+  gem 'minitest'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem "selenium-webdriver"
+  gem 'minitest-reporters'
+  gem "test_notifier"
+  gem "database_cleaner"
+  gem "factory_girl_rails"
+  gem 'mocha'
+  #Collection of testing matchers extracted from Shoulda
+  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

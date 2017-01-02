@@ -3,7 +3,7 @@
 # Exit on any error
 set -e
 
-export PROJECT=rails-kube-demo
+export PROJECT=kubernetes-tutorial-154400
 export NAME=app
 export TAG=$1
 export IMAGE="us.gcr.io/$PROJECT/$NAME:$TAG"

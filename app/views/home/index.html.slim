@@ -1,0 +1,16 @@
+- if user_signed_in?
+  .materialContainer
+    .box
+      h2.title =t('welcome')
+      = link_to destroy_user_session_path, method: :delete do
+        button.mdl-button--raised.mdl-button.mdl-js-button.mdl-js-ripple-effect =t('logout')
+- else
+  = render partial: "partials/login"
+
+/    = link_to new_user_registration_path do
+/      button.mdl-button--raised.mdl-button.mdl-js-button.mdl-js-ripple-effect =t('register')
+
+/    = link_to new_user_session_path do
+/      button.mdl-button--raised.mdl-button.mdl-js-button.mdl-js-ripple-effect =t('login')
+
+p Find me in app/views/home/index.html.slim

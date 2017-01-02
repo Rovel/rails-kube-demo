@@ -1,0 +1,38 @@
+header.mdl-layout__header
+  .mdl-layout__header-row
+    span.mdl-layout-title
+      | Umanni HR
+    .mdl-layout-spacer
+    .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
+      label.mdl-button.mdl-js-button.mdl-button--icon[for="waterfall-exp"]
+        i.material-icons
+          | search
+      .mdl-textfield__expandable-holder
+        input#waterfall-exp.mdl-textfield__input[type="text" name="sample"]
+.mdl-layout__drawer
+  span.mdl-layout-title
+    | Menu
+  nav.mdl-navigation
+    a.mdl-navigation__link[href="/"]
+      | Home
+    - if user_signed_in?
+      a.mdl-navigation__link[href="/users/edit"]
+        = t('profile')
+      a.mdl-navigation__link[href="/users/sign_in"]
+        = t('evaluations')
+
+    - else
+      a.mdl-navigation__link[href="/users/sign_in"]
+        = t('login')
+      a.mdl-navigation__link[href="/users/sign_up"]
+        = t('register')
+      a.mdl-navigation__link[href="/users/sign_in"]
+        = t('prices')
+    a.mdl-navigation__link[href="/users/sign_up"]
+      = t('help')
+    a.mdl-navigation__link[href="/users/sign_in"]
+      = t('about')
+    - if user_signed_in?
+      a.mdl-navigation__link
+        = link_to destroy_user_session_path, method: :delete do
+          .mdl-navigation__link =t('logout')
